@@ -64,4 +64,71 @@ body:
     attributes:
       value: |
         ---
+        **Note:** Feature requests are not guarantees of implementation. We prioritize features based on community need and technical feasibility.name: Feature request
+description: Suggest an idea or improvement for NVDA Cloud Sync.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Share your ideas!
+        Feature requests help shape the future of this project. Even if it's not implemented immediately, we want to hear how we can make your sync experience better.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: "Explain the issue or limitation you are running into right now."
+      placeholder: "Example: It’s hard to keep my desktop and laptop in sync automatically."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_workaround
+    attributes:
+      label: How do you currently handle this?
+      description: "Describe what you do today to work around the problem (e.g., using USB sticks, Dropbox, etc)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like NVDA Cloud Sync to do?
+      description: "Describe the feature or behavior you are hoping for."
+      placeholder: "Example: Add an option to automatically 'Push' settings every time NVDA exits."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: criticality
+    attributes:
+      label: How important is this to your workflow?
+      options:
+        - "Nice to have (Quality of Life)"
+        - "Important (Saves significant time)"
+        - "Critical (Currently blocked without this)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Why would this be useful?
+      description: "How does this benefit you and the wider NVDA community?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional notes
+      description: "Anything else you think might help us understand your request."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
         **Note:** Feature requests are not guarantees of implementation. We prioritize features based on community need and technical feasibility.
