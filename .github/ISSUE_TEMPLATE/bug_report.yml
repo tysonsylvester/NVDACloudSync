@@ -1,1 +1,78 @@
+name: Bug report
+description: Report a technical issue or unexpected behavior.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for reporting a bug! 
+        Before submitting, please ensure you are using the latest version of the add-on and your server.
 
+  - type: input
+    id: nvda_version
+    attributes:
+      label: NVDA Version
+      placeholder: "e.g., 2025.1"
+    validations:
+      required: true
+
+  - type: input
+    id: addon_version
+    attributes:
+      label: Add-on Version
+      placeholder: "e.g., 1.2.1-dev"
+    validations:
+      required: true
+
+  - type: input
+    id: host_environment
+    attributes:
+      label: Server/Host Environment
+      description: "Where is your server running? (e.g., Localhost, Linode VPS, Windows Home PC)"
+      placeholder: "e.g., Ubuntu 22.04 VPS"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: "Explain exactly what you clicked or typed to trigger the bug."
+      placeholder: |
+        1. Open NVDA Menu > Tools > Cloud Sync
+        2. Click 'Pull Snapshot'
+        3. Wait for download...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_vs_expected
+    attributes:
+      label: What happened vs. What should have happened?
+      placeholder: "I expected my addons to update, but instead NVDA restarted with no changes."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: NVDA Log Output
+      description: "CRITICAL: Open NVDA Log (NVDA+N > Tools > View Log). Paste relevant errors here."
+      placeholder: "Paste logs here..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: Security & Privacy Check
+      options:
+        - label: "I have removed my Server URL and Security Token from the logs above."
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Context
+      description: "Any other details? (e.g., Internet connection type, firewall settings, port number used)."
